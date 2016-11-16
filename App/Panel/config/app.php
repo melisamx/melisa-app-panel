@@ -179,6 +179,7 @@ return [
         App\Panel\Providers\RouteServiceProvider::class,
         
         Melisa\Laravel\Providers\UuidProvider::class,
+        Melisa\Laravel\Providers\HelpersProvider::class,
 
     ],
 
