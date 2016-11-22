@@ -2,13 +2,16 @@
 
 use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Logics\Redirects\Redirects;
+use App\Core\Modules\ApplicationSenchaModule;
+use App\Panel\Modules\ManifestClassicModule;
+use App\Panel\Modules\ManifestModernModule;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
 class HomeController extends Controller
 {
     
-    public function index(Request $request, Redirects $redirect)
+    public function index(Request $request, Redirects $redirect, ApplicationSenchaModule $module)
     {
         
         $response = $redirect->init($request->user()->id);
@@ -19,7 +22,19 @@ class HomeController extends Controller
             
         }
         
-        return 'View panel';
+        return $module->render();
+        
+    }
+    
+    public function manifestClassic(ManifestClassicModule $module) {
+        
+        return $module->render();
+        
+    }
+    
+    public function manifestModern(ManifestModernModule $module) {
+        
+        return $module->render();
         
     }
     
