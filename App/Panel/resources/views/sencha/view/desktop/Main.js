@@ -3,7 +3,10 @@ Ext.define('Melisa.panel.view.desktop.Main', {
     
     requires: [
         'Melisa.panel.view.desktop.MainController',
-        'Melisa.panel.view.TreeOptions'
+        'Melisa.panel.view.TreeOptions',
+        'Melisa.panel.view.desktop.West',
+        'Melisa.panel.view.desktop.Center',
+        'Melisa.panel.view.desktop.North'
     ],
     
     controller: 'apppanelmain',
@@ -12,63 +15,13 @@ Ext.define('Melisa.panel.view.desktop.Main', {
     cls: 'app',
     items: [
         {
-            region: 'west',
-            width: 350,
-            cls: 'west',
-            minWidth: 350,
-            layout: 'fit',
-            items: [
-                {
-                    xtype: 'apppaneltreeoptions'
-                }
-            ]
+            xtype: 'apppanelwest'
         },
         {
-            region: 'center',
-            cls: 'center',
-            layout: 'fit',
-            items: [
-                {
-                    xtype: 'tabpanel'
-                }
-            ]
+            xtype: 'apppanelcenter'
         },
         {
-            region: 'north',
-            cls: 'top',
-            height: 80,
-            layout: 'border',
-            items: [
-                {
-                    xtype: 'toolbar',
-                    region: 'west',
-                    cls: 'top-west',
-                    width: 350,
-                    items: [
-                        {
-                            xtype: 'button',
-                            iconCls: 'fa fa-bars',
-                            scale: 'large',
-                            width: '100%',
-                            cls: 'btnMain',
-                            text: 'Panel'
-                        }
-                    ]
-                },
-                {
-                    xtype: 'toolbar',
-                    region: 'center',
-                    items: [
-                        {
-                            text: 'Status'
-                        },
-                        '->',
-                        {
-                            text: 'Luis Heredia'
-                        }
-                    ]
-                }
-            ]
+            xtype: 'apppanelnorth'
         }
     ]
     
