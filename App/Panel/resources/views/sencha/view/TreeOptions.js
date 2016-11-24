@@ -32,7 +32,7 @@ Ext.define('Melisa.panel.view.TreeOptions', {
                 {
                     text: 'Binacle',
                     iconCls: 'fa x-fa fa-picture-o',
-                    my: 'Melisa.previos.view.phone.Main',
+                    my: 'Melisa.binacle.view.phone.Main',
                     leaf: true
                 }
             ]
