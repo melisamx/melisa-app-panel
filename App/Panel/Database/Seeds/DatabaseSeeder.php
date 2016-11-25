@@ -8,9 +8,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
                 
-        $this->call(ApplicationSeeder::class);
-        
+        $this->call(ApplicationSeeder::class);        
         $this->call(AssetsSeeder::class);
+        $this->call(MenusSeeder::class);
+        $this->call(MenusOptionsSeeder::class);
         
     }
     

@@ -13,7 +13,7 @@ class MenusSeeder extends Seeder
         $this->updateOrCreate('App\Core\Models\Menus', [
             [
                 'find'=>[
-                    'key'=>'app.panel.main', 
+                    'key'=>'menu.panel.main', 
                 ],
                 'values'=>[
                     'name'=>'Menu main in Application Panel',

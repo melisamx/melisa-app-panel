@@ -9,9 +9,9 @@ class MenusOptionsSeeder extends Seeder
     {
         
         app('App\Core\Logics\Menus\Install')->init([
-            'app.panel.main'=>[
-                'app.driver.access'=>[
-                    'app.driver.passengers.profile.view.access'
+            'menu.panel.main'=>[
+                'option.driver.access'=>[
+                    'option.driver.passengers.profile.view.access'
                 ]
             ],
         ]);
