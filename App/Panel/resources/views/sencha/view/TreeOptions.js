@@ -18,9 +18,15 @@ Ext.define('Melisa.panel.view.TreeOptions', {
             expanded: true,
             children: [
                 {
+                    text: 'Driver',
+                    iconCls: 'fa x-fa fa-picture-o',
+                    melisa: 'Melisa.driver.passengers.profile.View',
+                    leaf: true
+                },
+                {
                     text: 'Security',
                     iconCls: 'fa x-fa fa-comment',
-                    my: 'Melisa.chat.view.phone.Main',
+                    melisa: 'Melisa.security.view.phone.Main',
                     leaf: true
                 },
                 {

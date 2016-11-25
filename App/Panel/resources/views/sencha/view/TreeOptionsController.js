@@ -19,8 +19,7 @@ Ext.define('Melisa.panel.view.TreeOptionsController', {
         
         var me = this;
         
-        Ext.first('apppanelmenumodal').hide();
-        Ext.require(node.data.my, me.onLoadRequire, me);
+        Ext.require(node.data.melisa, me.onLoadRequire, me);
         
     },
     
@@ -28,7 +27,7 @@ Ext.define('Melisa.panel.view.TreeOptionsController', {
         
         var me = this,
             instance = Ext.create(ns),
-            main = Ext.first('apppanelmain');
+            main = Ext.first('apppanelcenter');
         
         main.add(instance);
         main.setActiveItem(instance);
