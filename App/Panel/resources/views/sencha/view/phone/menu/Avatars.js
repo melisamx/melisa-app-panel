@@ -38,6 +38,7 @@ Ext.define('Melisa.panel.view.phone.menu.Avatars', {
             xtype: 'button',
             height: '25%',
             scale: 'large',
+            width: '100%',
             text: Ext.manifest.melisa.user.name + 
                 '<br><small>' + 
                 Ext.manifest.melisa.user.email + 

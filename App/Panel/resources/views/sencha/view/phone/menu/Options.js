@@ -6,14 +6,11 @@ Ext.define('Melisa.panel.view.phone.menu.Options', {
         'Melisa.panel.view.TreeOptions'
     ],
     
-    alias: 'widget.apppaneloptions',
-    layout: 'fit',
-    scrollable: true,    
+    alias: 'widget.apppaneloptions', 
     items: [
         {
             xtype: 'apppaneltreeoptions',
             userCls: 'core-menu',
-            scrollable: true,
             height: '100%'
         }
     ]

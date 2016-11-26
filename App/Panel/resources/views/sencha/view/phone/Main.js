@@ -15,7 +15,8 @@ Ext.define('Melisa.panel.view.phone.Main', {
             xtype: 'apppanelheader'
         },
         {
-            xtype: 'apppanelbody'
+            xtype: 'apppanelbody',
+            reference: 'apppanelbody'
         }
     ]
     

@@ -9,19 +9,19 @@ Ext.define('Melisa.panel.view.phone.main.Header', {
     items: [
         {
             xtype: 'button',
-            iconCls: 'fa fa-bars',
+            iconCls: 'x-fa fa fa-bars',
             listeners: {
                 tap: 'onTapBtnTitle'
             }
         },
         {
             xtype: 'button',
-            iconCls: 'fa fa-bell',
+            iconCls: 'x-fa fa fa-bell',
             align: 'right'
         },
         {
             xtype: 'button',
-            iconCls: 'fa fa-comment',
+            iconCls: 'x-fa fa fa-comment',
             align: 'right'
         }
     ]

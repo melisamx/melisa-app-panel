@@ -15,18 +15,15 @@ class ManifestModernModule extends ManifestClassicModule
     public $cssAdd = [
         'animatecss',
         'fontawesome',
-        'waves.sencha',
         'app.panel.app.phone.css',
         'roboto'
     ];
     
     public $jsAdd = [
         'jquery',
-        'waves',
         'momentjs',
         'momentjs.locales',
         'momentjs.precise.range',
-        'https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAU7V5rGEn4X-ZjFUYqxwu28sAg3Fq6iis',
         'app.panel.app',
     ];
     

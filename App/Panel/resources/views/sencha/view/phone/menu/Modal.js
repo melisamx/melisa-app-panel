@@ -21,6 +21,7 @@ Ext.define('Melisa.panel.view.phone.menu.Modal', {
         type: 'slide',
         direction: 'right'
     },
+    scrollable: true,
     items: [
         {
             xtype: 'apppanelavatars',

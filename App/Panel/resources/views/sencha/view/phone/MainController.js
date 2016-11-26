@@ -10,32 +10,45 @@ Ext.define('Melisa.panel.view.phone.MainController', {
     ],
     
     routes: {
-        menu: 'onRouteShowMenu',
-        home: 'onRouteShowHome',
-        list: 'onRouteShowList'
+        home: 'onRouteShowHome'
     },
     
     onRender: function() {
         
-        Ext.create('Melisa.ux.Loader').destroy();
+        var me = this;
+        
+        Ext.create('Melisa.ux.Loader').destroy();        
+        Ext.History.on('change', me.onChangeHistory, me);
+        Ext.GlobalEvents.on('showcard', me.onGlobalShowCard, me);
         
     },
     
-    onRouteShowMenu: function() {
+    onChangeHistory: function(route) {
         
-        var me = this,
-            menu = me.getMenu();
+        var me = this;
         
-        menu.show();
+        if( route) {
+            
+            return;
+            
+        }
+        
+        /* con esto evitamos botón retroceso de android */
+        me.redirectTo('home');
+        return false;
+        
+    },
+    
+    onGlobalShowCard: function(card) {
+        
+        this.navigateCard(card);
         
     },
     
     onRouteShowHome: function() {
         
-        var me = this,
-            menu = me.getMenu();
-    
-        menu.hide();
+        var me = this;
+        
         Ext.Viewport.setActiveItem(me.getView());
         me.navigateCard('apppanelbody');
         
@@ -58,13 +71,7 @@ Ext.define('Melisa.panel.view.phone.MainController', {
         
         if( !me.menu) {
             
-            me.menu = Ext.create('widget.apppanelmenumodal', {
-                listeners: {
-                    hide: me.onHideMenu,
-                    scope: me
-                }
-            });
-            
+            me.menu = Ext.create('widget.apppanelmenumodal');            
             Ext.Viewport.add(me.menu);
             
         }
@@ -73,15 +80,12 @@ Ext.define('Melisa.panel.view.phone.MainController', {
         
     },
     
-    onHideMenu: function() {
-        
-        this.redirectTo('home');
-        
-    },
-    
     onTapBtnTitle: function() {
         
-        this.redirectTo('menu');
+        var me = this,
+            menu = me.getMenu();
+        
+        menu.show();
         
     }
     
