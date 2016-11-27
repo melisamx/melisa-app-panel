@@ -19,18 +19,68 @@ Ext.define('Melisa.panel.view.TreeOptionsController', {
         
         var me = this;
         
-        Ext.require(node.data.melisa, me.onLoadRequire, me);
+        if( !node.data.module) {
+            
+            return;
+            
+        }
+        
+        me.alternativeNameSpace(node.data.module);
         
     },
     
-    onLoadRequire: function(ns) {
+    alternativeNameSpace: function(module) {
+        
+        var me = this;
+        
+        Melisa.core.module.Manager.launch(module, function(module) {
+            
+            module.on('ready', me.onReadyModule, me);
+            
+        });
+        
+    },
+    
+    alternativeUrl: function() {
+        
+        Ext.Ajax.request({
+            url: node.data.module.url,
+            method: 'GET',
+            success: function() {
+                console.log('success', arguments);
+            },
+            failure: function(response, opts) {
+                console.log('error', arguments);
+            }
+        });
+        
+    },
+    
+    onLoadRequire: function(nameSpace) {
         
         var me = this,
-            instance = Ext.create(ns),
-            main = Ext.first('apppanelcenter');
+            instance = Ext.create(nameSpace);
         
-        main.add(instance);
-        main.setActiveItem(instance);
+        console.log('onLoadRequire', instance);
+        
+        instance.getController().on('ready', me.onReadyModule, me);
+        
+    },
+    
+    onReadyModule: function(module) {
+        console.log('onReadyModule', arguments);
+        var me = this,
+            main = Ext.first('apppanelcenter'),
+            moduleModel = module.getViewModel();
+        
+        main.add(module);
+        main.setActiveItem(module);
+        me.getViewModel().set({
+            moduleActive: {
+                title: moduleModel.get('wrapper.title'),
+                nameSpace: Ext.getClassName(module)
+            }
+        });
         
     }
     

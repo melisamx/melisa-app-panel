@@ -5,10 +5,6 @@ Ext.define('Melisa.panel.view.desktop.Center', {
     alias: 'widget.apppanelcenter',
     region: 'center',
     cls: 'center',
-    layout: 'fit',
-    items: [
-        {
-            xtype: 'tabpanel'
-        }
-    ]
+    layout: 'card',
+    reference: 'panelcenter'
 });

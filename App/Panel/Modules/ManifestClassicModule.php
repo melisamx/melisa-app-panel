@@ -26,6 +26,7 @@ class ManifestClassicModule extends ManifestSenchaModule
             'urls'=>[
                 'realtime'=>'https://demo.nerine.mx:8044/',
             ],
+            'menu'=>$this->menu('menu.panel.main'),
             'identity'=>'asd'
         ];
         

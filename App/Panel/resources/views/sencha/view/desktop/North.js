@@ -7,6 +7,7 @@ Ext.define('Melisa.panel.view.desktop.North', {
     cls: 'north',
     height: 80,
     layout: 'border',
+    reference: 'panelnorth',
     items: [
         {
             xtype: 'toolbar',
@@ -20,7 +21,9 @@ Ext.define('Melisa.panel.view.desktop.North', {
                     scale: 'large',
                     width: '100%',
                     cls: 'btnMain',
-                    text: 'Panel'
+                    bind: {
+                        text: '{appName}'
+                    }
                 }
             ]
         },
@@ -29,11 +32,21 @@ Ext.define('Melisa.panel.view.desktop.North', {
             region: 'center',
             items: [
                 {
-                    text: 'Status'
+                    xtype: 'button',
+                    iconCls: 'x-fa fa fa-chevron-left',
+                    bind: {
+                        text: '{moduleActive.title}',
+                        hidden: '{showclosemodule}'
+                    },
+                    listeners: {
+                        click: 'onClickCloseModule'
+                    }
                 },
                 '->',
                 {
-                    text: 'Luis Heredia'
+                    bind: {
+                        text: '{identityName}'
+                    }
                 }
             ]
         }
