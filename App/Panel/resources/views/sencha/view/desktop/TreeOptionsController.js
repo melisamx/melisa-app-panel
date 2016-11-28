@@ -10,10 +10,20 @@ Ext.define('Melisa.panel.view.desktop.TreeOptionsController', {
     onReadyModule: function(module) {
         
         var me = this,
+            main = Ext.first('apppanelcenter');
+        
+        main.add(module);
+        me.updateModuleActive(module);        
+        module.on('reboot', me.updateModuleActive, me);
+        
+    },
+    
+    updateModuleActive: function(module) {
+        
+        var me = this,
             main = Ext.first('apppanelcenter'),
             moduleModel = module.getViewModel();
         
-        main.add(module);
         main.setActiveItem(module);
         me.getViewModel().set({
             moduleActive: {

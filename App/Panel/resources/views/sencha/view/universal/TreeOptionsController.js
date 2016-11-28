@@ -50,7 +50,7 @@ Ext.define('Melisa.panel.view.universal.TreeOptionsController', {
     onReadyModule: function(module) {
         
         var main = Ext.first('apppanelmain');
-    
+        
         Ext.first('apppanelmenumodal').hide();
         main.setActiveItem(module);
         
