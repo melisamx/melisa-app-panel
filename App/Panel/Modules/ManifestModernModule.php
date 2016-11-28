@@ -20,27 +20,10 @@ class ManifestModernModule extends ManifestClassicModule
     ];
     
     public $jsAdd = [
-        'jquery',
         'momentjs',
         'momentjs.locales',
         'momentjs.precise.range',
         'app.panel.app',
     ];
-    
-    public function config() {
-        
-        $users = app()->make('App\Core\Models\User');
-        
-        $user = $users->find(request()->user()->id);
-        
-        return [
-            'user'=>$user->getAttributes(),
-            'urls'=>[
-                'realtime'=>'https://demo.nerine.mx:8044/',
-            ],
-            'identity'=>'asd'
-        ];
-        
-    }
     
 }

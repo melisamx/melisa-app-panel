@@ -16,8 +16,7 @@ Ext.define('Melisa.panel.view.phone.MainController', {
     onRender: function() {
         
         var me = this;
-        
-        Ext.create('Melisa.ux.Loader').destroy();        
+               
         Ext.History.on('change', me.onChangeHistory, me);
         Ext.GlobalEvents.on('showcard', me.onGlobalShowCard, me);
         
