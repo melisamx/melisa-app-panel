@@ -12,12 +12,15 @@ class MenusOptionsSeeder extends Seeder
             'menu.panel.main'=>[
                 'option.driver.access'=>[
                     'option.driver.passengers.profile.view.access'
-                ]
+                ],
+                'option.lamina.access'=>[
+                    'option.lamina.programaciones.view.access'
+                ],
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[
                     'option.driver.phone.passengers.profile.view.access'
-                ]
+                ],
             ],
         ]);
         
