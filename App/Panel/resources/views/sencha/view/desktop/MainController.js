@@ -15,7 +15,7 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
             model = me.getViewModel(),
             menuMain = model.getStore('menuMain'),
             options = Melisa.core.menus.Tree.build(Ext.manifest.melisa.menu);
-        console.log(options);        
+        
         menuMain.getRoot().appendChild(options);
         
     },

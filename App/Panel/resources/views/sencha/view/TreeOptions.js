@@ -2,7 +2,9 @@ Ext.define('Melisa.panel.view.TreeOptions', {
     extend: 'Ext.list.Tree',
     
     requires: [
-        'Melisa.panel.view.TreeOptionsController'
+        Ext.platformTags.desktop ? 
+            'Melisa.panel.view.TreeOptionsController' : 
+            'Melisa.panel.view.universal.TreeOptionsController'
     ],
         
     controller: 'apppaneltreeoptions',

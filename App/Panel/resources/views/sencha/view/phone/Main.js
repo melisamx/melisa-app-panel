@@ -4,11 +4,15 @@ Ext.define('Melisa.panel.view.phone.Main', {
     requires: [
         'Melisa.panel.view.phone.main.Header',
         'Melisa.panel.view.phone.main.Body',
-        'Melisa.panel.view.phone.MainController'
+        'Melisa.panel.view.phone.MainController',
+        'Melisa.panel.view.MainModel'
     ],
     
     alias: 'widget.apppanelmain',
     controller: 'apppanelmain',
+    viewModel: {
+        type: 'appmainmodel'
+    },
     layout: 'card',
     items: [
         {

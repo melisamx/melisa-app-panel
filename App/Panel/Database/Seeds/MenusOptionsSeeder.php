@@ -14,6 +14,11 @@ class MenusOptionsSeeder extends Seeder
                     'option.driver.passengers.profile.view.access'
                 ]
             ],
+            'menu.panel.phone.main'=>[
+                'option.driver.access'=>[
+                    'option.driver.phone.passengers.profile.view.access'
+                ]
+            ],
         ]);
         
     }

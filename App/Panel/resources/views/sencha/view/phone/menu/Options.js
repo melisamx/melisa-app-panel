@@ -11,7 +11,10 @@ Ext.define('Melisa.panel.view.phone.menu.Options', {
         {
             xtype: 'apppaneltreeoptions',
             userCls: 'core-menu',
-            height: '100%'
+            height: '100%',
+            bind: {
+                store: '{menuMain}'
+            }
         }
     ]
     

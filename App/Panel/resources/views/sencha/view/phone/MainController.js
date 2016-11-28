@@ -6,7 +6,9 @@ Ext.define('Melisa.panel.view.phone.MainController', {
     
     requires: [
         'Melisa.ux.Loader',
-        'Melisa.panel.view.phone.menu.Modal'
+        'Melisa.core.menus.Tree',
+        'Melisa.panel.view.phone.menu.Modal',
+        'Melisa.core.module.Manager'
     ],
     
     routes: {
@@ -15,8 +17,12 @@ Ext.define('Melisa.panel.view.phone.MainController', {
     
     onRender: function() {
         
-        var me = this;
-               
+        var me = this,
+            model = me.getViewModel(),
+            menuMain = model.getStore('menuMain'),
+            options = Melisa.core.menus.Tree.build(Ext.manifest.melisa.menu);
+        
+        menuMain.getRoot().appendChild(options);
         Ext.History.on('change', me.onChangeHistory, me);
         Ext.GlobalEvents.on('showcard', me.onGlobalShowCard, me);
         
@@ -70,7 +76,9 @@ Ext.define('Melisa.panel.view.phone.MainController', {
         
         if( !me.menu) {
             
-            me.menu = Ext.create('widget.apppanelmenumodal');            
+            me.menu = Ext.create('widget.apppanelmenumodal', {
+                viewModel: me.getViewModel()
+            });            
             Ext.Viewport.add(me.menu);
             
         }

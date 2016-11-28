@@ -26,4 +26,10 @@ class ManifestModernModule extends ManifestClassicModule
         'app.panel.app',
     ];
     
+    public function getMenu() {
+        
+        return $this->menu('menu.panel.phone.main');
+        
+    }
+    
 }

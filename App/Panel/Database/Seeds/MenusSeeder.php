@@ -19,6 +19,14 @@ class MenusSeeder extends Seeder
                     'name'=>'Menu main in Application Panel',
                 ]
             ],  
+            [
+                'find'=>[
+                    'key'=>'menu.panel.phone.main', 
+                ],
+                'values'=>[
+                    'name'=>'Menu main in Application Panel version phone',
+                ]
+            ],  
         ]);
         
     }

@@ -31,12 +31,18 @@ class ManifestClassicModule extends ManifestSenchaModule
         
         return [
             'user'=>$user->getAttributes(),
-            'menu'=>$this->menu('menu.panel.main'),
+            'menu'=>$this->getMenu(),
             'urls'=>[
                 'realtime'=>'https://demo.nerine.mx:8044/',
             ],
             'identity'=>'asd'
         ];
+        
+    }
+    
+    public function getMenu() {
+        
+        return $this->menu('menu.panel.main');
         
     }
     
