@@ -5,7 +5,8 @@ Ext.define('Melisa.panel.view.phone.main.Header', {
     alias: 'widget.apppanelheader',
     docked: 'top',
     cls: 'core-header',
-    title: '<img src="/assets/images/powerby.png" height="25" />',    
+    title: '<img src="/assets/images/powerby.png" height="25" />',
+    titleAlign: 'center',
     items: [
         {
             xtype: 'button',

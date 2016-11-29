@@ -16,12 +16,16 @@ class MenusOptionsSeeder extends Seeder
                 'option.lamina.access'=>[
                     'option.lamina.programaciones.view.access',
                     'option.lamina.tarjas.view.access',
+                    'option.lamina.tarjas.add.access',
                     'option.lamina.reportes.view.access',
                 ],
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[
                     'option.driver.phone.passengers.profile.view.access'
+                ],
+                'option.lamina.access'=>[
+                    'option.lamina.phone.programaciones.view.access',
                 ],
             ],
         ]);
