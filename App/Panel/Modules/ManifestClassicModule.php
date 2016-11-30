@@ -32,6 +32,7 @@ class ManifestClassicModule extends ManifestSenchaModule
         return [
             'user'=>$user->getAttributes(),
             'menu'=>$this->getMenu(),
+            'appName'=>config('app.name'),
             'urls'=>[
                 'realtime'=>'https://demo.nerine.mx:8044/',
             ],
