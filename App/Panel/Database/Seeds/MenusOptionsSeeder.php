@@ -26,6 +26,7 @@ class MenusOptionsSeeder extends Seeder
                 ],
                 'option.lamina.access'=>[
                     'option.lamina.phone.programaciones.view.access',
+                    'option.lamina.phone.tarjas.add.access',
                 ],
             ],
         ]);
