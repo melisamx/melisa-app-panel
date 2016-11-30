@@ -24,6 +24,7 @@ class MenusOptionsSeeder extends Seeder
                 'option.driver.access'=>[
                     'option.driver.phone.passengers.profile.view.access'
                 ],
+                'option.tracking.phone.pedimentos.view.access',
                 'option.lamina.access'=>[
                     'option.lamina.phone.programaciones.view.access',
                     'option.lamina.phone.tarjas.add.access',
