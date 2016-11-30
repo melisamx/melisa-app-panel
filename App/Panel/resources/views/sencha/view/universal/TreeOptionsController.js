@@ -41,9 +41,30 @@ Ext.define('Melisa.panel.view.universal.TreeOptionsController', {
         
         Melisa.core.module.Manager.launch(module, function(module) {
             
-            module.on('ready', me.onReadyModule, me);
+            if( module.getIsReady()) {
+                
+                module.on('reboot', me.onRebootModule, me, {
+                    single: true
+                });
+                
+            } else {
+                
+                module.on('ready', me.onReadyModule, me, {
+                    single: true
+                });
+                
+            }
             
         });
+        
+    },
+    
+    onRebootModule: function(module) {
+        
+        var main = Ext.first('apppanelmain');
+        
+        Ext.first('apppanelmenumodal').hide();
+        main.setActiveItem(module);
         
     },
     

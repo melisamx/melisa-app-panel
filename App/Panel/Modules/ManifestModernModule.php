@@ -15,7 +15,7 @@ class ManifestModernModule extends ManifestClassicModule
     public $cssAdd = [
         'animatecss',
         'fontawesome',
-//        'app.panel.app.phone.css',
+        'app.panel.app.phone.css',
         'roboto'
     ];
     

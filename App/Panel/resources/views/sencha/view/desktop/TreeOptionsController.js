@@ -32,6 +32,12 @@ Ext.define('Melisa.panel.view.desktop.TreeOptionsController', {
             }
         });
         
+    },
+    
+    onRebootModule: function(module) {
+        
+        console.log('onRebootModule', module);
+        
     }
     
 });
