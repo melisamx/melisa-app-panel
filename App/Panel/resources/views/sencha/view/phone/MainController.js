@@ -1,7 +1,5 @@
-
 Ext.define('Melisa.panel.view.phone.MainController', {
-    extend: 'Melisa.core.ViewController',
-    
+    extend: 'Melisa.core.ViewController',    
     alias: 'controller.apppanelmain',
     
     requires: [
@@ -10,6 +8,12 @@ Ext.define('Melisa.panel.view.phone.MainController', {
         'Melisa.panel.view.phone.menu.Modal',
         'Melisa.core.module.Manager'
     ],
+    
+    listen: {
+        global: {
+            activatemodule: 'onActivateModule'
+        }
+    },
     
     routes: {
         home: 'onRouteShowHome'
@@ -93,6 +97,21 @@ Ext.define('Melisa.panel.view.phone.MainController', {
             menu = me.getMenu();
         
         menu.show();
+        
+    },
+    
+    onActivateModule: function(module) {
+        
+        var me = this;
+        
+        if( !module) {
+            
+            me.redirectTo('home');
+            return;
+            
+        }
+        
+        me.getView().setActiveItem(module);
         
     }
     
