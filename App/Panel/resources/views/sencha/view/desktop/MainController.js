@@ -17,6 +17,7 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
             options = Melisa.core.menus.Tree.build(Ext.manifest.melisa.menu);
         
         model.set('appName', Ext.manifest.melisa.appName);
+        model.set('identityName', Ext.manifest.melisa.user.name);
         menuMain.getRoot().appendChild(options);
         
     },
