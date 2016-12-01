@@ -33,6 +33,8 @@ Ext.define('Melisa.panel.view.desktop.North', {
             items: [
                 {
                     xtype: 'button',
+                    cls: 'button-close-module',
+                    scale: 'large',
                     iconCls: 'x-fa fa fa-chevron-left',
                     bind: {
                         text: '{moduleActive.title}',
