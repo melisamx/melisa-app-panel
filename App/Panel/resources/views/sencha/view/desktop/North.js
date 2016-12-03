@@ -21,8 +21,12 @@ Ext.define('Melisa.panel.view.desktop.North', {
                     scale: 'large',
                     width: '100%',
                     cls: 'btnMain',
+                    enableToggle: true,
                     bind: {
                         text: '{appName}'
+                    },
+                    listeners: {
+                        toggle: 'onToogleBtnMain'
                     }
                 }
             ]

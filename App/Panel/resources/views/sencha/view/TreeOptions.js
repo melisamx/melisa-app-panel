@@ -1,5 +1,6 @@
 Ext.define('Melisa.panel.view.TreeOptions', {
     extend: 'Ext.list.Tree',
+    alias: 'widget.apppaneltreeoptions',
     
     requires: [
         Ext.platformTags.desktop ? 
@@ -8,7 +9,6 @@ Ext.define('Melisa.panel.view.TreeOptions', {
     ],
         
     controller: 'apppaneltreeoptions',
-    alias: 'widget.apppaneltreeoptions',
     ui: 'navigation',
     defaults: {
         indent: 15

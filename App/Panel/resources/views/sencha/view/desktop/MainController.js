@@ -1,6 +1,5 @@
 Ext.define('Melisa.panel.view.desktop.MainController', {
-    extend: 'Melisa.core.ViewController',
-    
+    extend: 'Melisa.core.ViewController',    
     alias: 'controller.apppanelmain',
     
     requires: [
@@ -8,6 +7,28 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
         'Melisa.core.menus.Tree',
         'Melisa.core.module.Manager'
     ],
+    
+    onToogleBtnMain: function(button, pressed) {
+        
+        var me = this,
+            panWest = me.lookup('panWest'), 
+            treOptions = me.lookup('treOptions');
+        
+        if( pressed) {
+            
+            treOptions.setMicro('a');
+            panWest.setWidth(62);
+            button.up().setWidth(62);
+            
+        } else {
+            
+            treOptions.setMicro(null);
+            panWest.setWidth(350);
+            button.up().setWidth(350);
+            
+        }
+        
+    },
     
     onRender: function() {
         
