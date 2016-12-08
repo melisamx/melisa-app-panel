@@ -29,6 +29,7 @@ class MenusOptionsSeeder extends Seeder
                     'option.lamina.phone.programaciones.view.access',
                     'option.lamina.phone.tarjas.add.access',
                 ],
+                'option.chat.phone.chat.view.access',
             ],
         ]);
         
