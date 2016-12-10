@@ -29,6 +29,7 @@ Ext.define('Melisa.panel.view.phone.MainController', {
         menuMain.getRoot().appendChild(options);
         Ext.History.on('change', me.onChangeHistory, me);
         Ext.GlobalEvents.on('showcard', me.onGlobalShowCard, me);
+        Ext.Loader.loadScript(Ext.manifest.melisa.urls.realtime);
         
     },
     

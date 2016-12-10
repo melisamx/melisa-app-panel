@@ -10,6 +10,9 @@ Route::get('/login', function() {
 
 Route::get('/logout', function() {
     
+    /* necesary no destroy session */
+    session()->flush();
+    
     Auth::logout();
     return redirect('../login');
     

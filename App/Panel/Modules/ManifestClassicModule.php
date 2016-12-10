@@ -1,6 +1,9 @@
 <?php namespace App\Panel\Modules;
 
 use App\Core\Modules\ManifestSenchaModule;
+use App\Core\Logics\Identities\IdentitySession;
+use App\Core\Repositories\IdentitiesRepository;
+use App\Core\Repositories\UsersRepository;
 
 /**
  * 
@@ -22,21 +25,29 @@ class ManifestClassicModule extends ManifestSenchaModule
     
     public function config() {
         
-        $users = app()->make('App\Core\Models\User');
-        
         /* necesary no function hidden attributes */
-        $user = $users->find(request()->user()->id, [
+        $user = app()->make(UsersRepository::class)->find(request()->user()->id, [
             'id', 'name', 'email']
         );
+        
+        $idIdentity = app()->make(IdentitySession::class)->init($user->id);
+        $identity = [];
+        
+        if( $idIdentity) {
+            
+            $identity = app()->make(IdentitiesRepository::class)->find($idIdentity);
+            
+        }
         
         return [
             'user'=>$user->getAttributes(),
             'menu'=>$this->getMenu(),
             'appName'=>config('app.name'),
             'urls'=>[
-                'realtime'=>'https://demo.nerine.mx:8044/',
+                'realtime'=>'https://developer.melisa.mx:8044/socket.io/socket.io.js',
             ],
-            'identity'=>'asd'
+            'idIdentity'=>$idIdentity,
+            'identity'=>$identity
         ];
         
     }
