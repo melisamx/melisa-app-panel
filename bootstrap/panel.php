@@ -11,7 +11,7 @@
 |
 */
 
-include __DIR__ . '/../App/Panel/Application.php';
+require_once __DIR__ . '/../App/Panel/Application.php';
 
 $app = new App\Panel\Application(
     [

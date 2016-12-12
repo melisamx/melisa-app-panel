@@ -1,0 +1,76 @@
+.west.x-panel-default,
+.north-west.x-toolbar-default {
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    z-index: 9999;
+
+}
+
+.west {
+    
+    .x-treelist-toolstrip
+    {
+        text-align: center;
+        background-color: transparent;
+        width: 100%;
+    }
+    
+    .x-treelist-item-icon, .x-treelist-item-tool,
+    .x-treelist-item-expander
+    {
+        color: @color-second;
+    }
+    
+}
+
+.x-treelist-floater .x-treelist-item-icon, .x-treelist-item-tool
+{
+    color: @color-second;
+}
+
+/* necesary mini menu */
+.x-treelist-item-icon:before,
+.x-treelist-item-tool:before,
+.x-treelist-item-expander,
+.x-treelist-item-text
+{
+    line-height: 52px;
+
+}
+
+.x-treelist-item-text
+{
+    color: #000;
+    font-family: Roboto;
+}
+
+.x-treelist-item-icon:before
+{
+    color: @color-primary;
+    font-size: 24px;
+}
+
+.x-treelist-navigation .x-treelist-item-text
+{
+    margin-left: 56px;
+}
+
+.x-treelist-item-selected > .x-treelist-row
+{
+    background-color: @color-third;
+    box-shadow: 4px 0 0 0 #0089ED inset;
+
+    .x-treelist-item-text,
+    .x-treelist-item-icon:before
+    {
+        color: @color-primary;
+    }
+
+}
+
+.x-treelist-navigation .x-treelist-item-icon
+{
+    left: 13px;
+}

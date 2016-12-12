@@ -1,14 +1,28 @@
-<?php
+<?php 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
+Route::get('/', 'HomeController@index')->middleware('auth');
 
-Route::get('/', 'HomeController@index')/*->middleware('auth')*/;
+Route::get('/login', function() {
+    
+    return redirect('../login');
+    
+});
+
+Route::get('/logout', function() {
+    
+    /* necesary no destroy session */
+    session()->flush();
+    
+    Auth::logout();
+    return redirect('../login');
+    
+});
+
+Route::group([
+    'prefix'=>'manifest'
+], function() {
+    
+    Route::get('/classic', 'HomeController@manifestClassic');
+    Route::get('/modern', 'HomeController@manifestModern');
+
+});

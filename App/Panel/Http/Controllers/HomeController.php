@@ -1,18 +1,41 @@
 <?php namespace App\Panel\Http\Controllers;
 
 use Melisa\Laravel\Http\Controllers\Controller;
+use App\Core\Logics\Redirects\Redirects;
+use App\Core\Modules\ApplicationSenchaModule;
+use App\Panel\Modules\ManifestClassicModule;
+use App\Panel\Modules\ManifestModernModule;
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class HomeController extends Controller
 {
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    
+    public function index(Request $request, Redirects $redirect, ApplicationSenchaModule $module)
     {
-        return 'Hola panel';
+        
+        $response = $redirect->init($request->user()->id);
+        
+        if( $response instanceof RedirectResponse) {
+            
+            return $response;
+            
+        }
+        
+        return $module->render();
+        
+    }
+    
+    public function manifestClassic(ManifestClassicModule $module) {
+        
+        return $module->render();
+        
+    }
+    
+    public function manifestModern(ManifestModernModule $module) {
+        
+        return $module->render();
+        
     }
     
 }
