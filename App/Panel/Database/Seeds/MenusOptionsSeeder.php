@@ -30,6 +30,9 @@ class MenusOptionsSeeder extends Seeder
                     'option.lamina.phone.tarjas.add.access',
                 ],
                 'option.chat.phone.chat.view.access',
+                'option.llantas.access'=>[
+                    'option.llantas.phone.llantas.escanear.access'
+                ]
             ],
         ]);
         
