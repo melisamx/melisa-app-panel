@@ -31,7 +31,6 @@ Ext.define('Melisa.panel.view.universal.TreeOptionsController', {
         }
         
         me.alternativeNameSpace(node.data.module);
-        cmp.setSelection(null);
         
     },
     
@@ -40,6 +39,8 @@ Ext.define('Melisa.panel.view.universal.TreeOptionsController', {
         var me = this;
         
         Melisa.core.module.Manager.launch(module, function(module) {
+            
+            me.getView().setSelection(null);
             
             if( module.getIsReady()) {
                 

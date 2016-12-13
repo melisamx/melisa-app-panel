@@ -10,9 +10,9 @@ Ext.define('Melisa.panel.view.TreeOptions', {
         
     controller: 'apppaneltreeoptions',
     ui: 'navigation',
+    expanderFirst: false,
     defaults: {
         indent: 15
-    },
-    expanderFirst: false
+    }
         
 });
