@@ -35,7 +35,10 @@ class MenusOptionsSeeder extends InstallSeeder
                 'option.chat.phone.chat.view.access',
                 'option.llantas.access'=>[
                     'option.llantas.phone.llantas.escanear.access'
-                ]
+                ],
+                'option.security.access'=>[
+                    'option.security.phone.passwordless.view.access'
+                ],
             ],
         ]);
         
