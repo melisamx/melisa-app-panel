@@ -31,7 +31,6 @@ Ext.define('Melisa.panel.view.universal.TreeOptionsController', {
         }
         
         me.alternativeNameSpace(node.data.module);
-        Ext.first('apppanelmenumodal').hide();
         
     },
     
