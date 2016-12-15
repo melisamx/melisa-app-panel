@@ -1,14 +1,14 @@
 <?php namespace App\Panel\Database\Seeds;
 
-use Illuminate\Database\Seeder;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class MenusOptionsSeeder extends Seeder
+class MenusOptionsSeeder extends InstallSeeder
 {
     
     public function run()
     {
         
-        app('App\Core\Logics\Menus\Install')->init([
+        $this->installMenuOptions([
             'menu.panel.main'=>[
                 'option.driver.access'=>[
                     'option.driver.passengers.profile.view.access'
@@ -19,6 +19,9 @@ class MenusOptionsSeeder extends Seeder
                     'option.lamina.tarjas.add.access',
                     'option.lamina.reportes.view.access',
                 ],
+                'option.events.access'=>[
+                    'option.events.binnacle.view.access',
+                ]
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[

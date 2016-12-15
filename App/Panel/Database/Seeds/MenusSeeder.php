@@ -1,32 +1,19 @@
 <?php namespace App\Panel\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\UpdateOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class MenusSeeder extends Seeder
+class MenusSeeder extends InstallSeeder
 {
-    use UpdateOrCreate;
     
     public function run()
     {
         
-        $this->updateOrCreate('App\Core\Models\Menus', [
-            [
-                'find'=>[
-                    'key'=>'menu.panel.main', 
-                ],
-                'values'=>[
-                    'name'=>'Menu main in Application Panel',
-                ]
-            ],  
-            [
-                'find'=>[
-                    'key'=>'menu.panel.phone.main', 
-                ],
-                'values'=>[
-                    'name'=>'Menu main in Application Panel version phone',
-                ]
-            ],  
+        $this->installMenu('menu.panel.main', [
+           'name'=>'Menu main in Application Panel',
+        ]);
+        
+        $this->installMenu('menu.panel.phone.main',  [
+            'name'=>'Menu main in Application Panel version phone',
         ]);
         
     }
