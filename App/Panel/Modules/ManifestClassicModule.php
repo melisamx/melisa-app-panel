@@ -39,12 +39,18 @@ class ManifestClassicModule extends ManifestSenchaModule
             
         }
         
+        if( $this->debug) {
+            
+            $this->jsAdd []= config('app.urlLiveReload');
+            
+        }
+        
         return [
             'user'=>$user->getAttributes(),
             'menu'=>$this->getMenu(),
             'appName'=>config('app.name'),
             'urls'=>[
-                'realtime'=>'https://developer.melisa.mx:8044/socket.io/socket.io.js',
+                'realtime'=>config('app.urlRealtime'),
             ],
             'idIdentity'=>$idIdentity,
             'identity'=>$identity
