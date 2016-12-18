@@ -1,4 +1,3 @@
-
 Ext.define('Melisa.panel.view.phone.menu.Modal', {
     extend: 'Ext.Container',
     alias: 'widget.apppanelmenumodal',
