@@ -43,7 +43,14 @@ class ManifesModule extends ManifestSenchaModule
                 'realtime'=>config('app.urlRealtime'),
             ],
             'idIdentity'=>$idIdentity,
-            'identity'=>$identity
+            'identity'=>$identity,
+            'applications'=>[
+                'driver'=>[
+                    'redirect'=>'/driver.php/drivers/'
+                ],
+                'chat'=>$this->module('task.chat.chat.view.access', false),
+                'security'=>$this->module('task.chat.chat.view.access', false),
+            ]
         ];
         
     }

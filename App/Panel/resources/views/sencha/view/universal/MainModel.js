@@ -1,4 +1,4 @@
-Ext.define('Melisa.panel.view.MainModel', {
+Ext.define('Melisa.panel.view.universal.MainModel', {
     extend: 'Ext.app.ViewModel',
     
     alias: 'viewmodel.appmainmodel',
@@ -12,6 +12,7 @@ Ext.define('Melisa.panel.view.MainModel', {
     },
     
     stores: {
+        applications: {},
         menuMain: {
             type: 'tree',
             proxy: {

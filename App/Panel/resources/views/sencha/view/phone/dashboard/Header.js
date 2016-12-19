@@ -1,5 +1,4 @@
-
-Ext.define('Melisa.panel.view.phone.main.Header', {
+Ext.define('Melisa.panel.view.phone.dashboard.Header', {
     extend: 'Ext.TitleBar',
     
     alias: 'widget.apppanelheader',
@@ -17,12 +16,7 @@ Ext.define('Melisa.panel.view.phone.main.Header', {
         },
         {
             xtype: 'button',
-            iconCls: 'x-fa fa fa-bell',
-            align: 'right'
-        },
-        {
-            xtype: 'button',
-            iconCls: 'x-fa fa fa-comment',
+            iconCls: 'x-fa fa fa-search',
             align: 'right'
         }
     ]
