@@ -1,13 +1,11 @@
 <?php namespace App\Panel\Modules;
 
-use App\Panel\Modules\ManifestClassicModule;
-
 /**
  * 
  *
  * @author Luis Josafat Heredia Contreras
  */
-class ManifestModernModule extends ManifestClassicModule
+class ManifestModernModule extends ManifesModule
 {
     
     public $type = 'modern';

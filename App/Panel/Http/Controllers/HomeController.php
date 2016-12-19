@@ -8,6 +8,11 @@ use App\Panel\Modules\ManifestModernModule;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class HomeController extends Controller
 {
     
