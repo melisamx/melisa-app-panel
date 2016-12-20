@@ -2,10 +2,6 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
     extend: 'Melisa.core.ViewController',    
     alias: 'controller.panelbodycontroller',
     
-    requires: [
-        'Melisa.core.module.Manager'
-    ],
-    
     control: {
         'gmdbuttonmedia': {
             tap: 'onTapBtnMedia'
@@ -27,25 +23,7 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
             
         }
         
-        Melisa.core.module.Manager.launch(config, function(module) {
-            
-            if( module.getIsReady()) {
-                
-                module.on('reboot', me.onReadyOrRebootModule, me, {
-                    single: true,
-                    args: [ button ]
-                });
-                
-            } else {
-                
-                module.on('ready', me.onReadyOrRebootModule, me, {
-                    single: true,
-                    args: [ button ]
-                });
-                
-            }
-            
-        });
+        me.moduleRun(config, me.onReadyOrRebootModule, me.onReadyOrRebootModule, button);
         
     },
     
@@ -56,6 +34,6 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
         button.enable();
         main.setActiveItem(module);
         
-    }    
+    }
     
 });
