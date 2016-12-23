@@ -1,16 +1,11 @@
 <?php namespace App\Panel\Modules;
 
-use App\Core\Modules\ManifestSenchaModule;
-use App\Core\Logics\Identities\IdentitySession;
-use App\Core\Repositories\IdentitiesRepository;
-use App\Core\Repositories\UsersRepository;
-
 /**
  * 
  *
  * @author Luis Josafat Heredia Contreras
  */
-class ManifestClassicModule extends ManifestSenchaModule
+class ManifestClassicModule extends ManifesModule
 {
     
     public $cssAdd = [
@@ -22,35 +17,6 @@ class ManifestClassicModule extends ManifestSenchaModule
     public $jsAdd = [
         'app.panel.app',
     ];
-    
-    public function config() {
-        
-        /* necesary no function hidden attributes */
-        $user = app()->make(UsersRepository::class)->find(request()->user()->id, [
-            'id', 'name', 'email']
-        );
-        
-        $idIdentity = app()->make(IdentitySession::class)->init($user->id);
-        $identity = [];
-        
-        if( $idIdentity) {
-            
-            $identity = app()->make(IdentitiesRepository::class)->find($idIdentity);
-            
-        }
-        
-        return [
-            'user'=>$user->getAttributes(),
-            'menu'=>$this->getMenu(),
-            'appName'=>config('app.name'),
-            'urls'=>[
-                'realtime'=>'https://developer.melisa.mx:8044/socket.io/socket.io.js',
-            ],
-            'idIdentity'=>$idIdentity,
-            'identity'=>$identity
-        ];
-        
-    }
     
     public function getMenu() {
         

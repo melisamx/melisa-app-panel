@@ -1,4 +1,3 @@
-
 Ext.define('Melisa.panel.view.phone.menu.Options', {
     extend: 'Ext.Container',
     
@@ -6,7 +5,7 @@ Ext.define('Melisa.panel.view.phone.menu.Options', {
         'Melisa.panel.view.TreeOptions'
     ],
     
-    alias: 'widget.apppaneloptions', 
+    alias: 'widget.apppaneloptions',
     items: [
         {
             xtype: 'apppaneltreeoptions',

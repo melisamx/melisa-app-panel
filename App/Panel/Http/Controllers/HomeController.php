@@ -4,10 +4,15 @@ use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Logics\Redirects\Redirects;
 use App\Core\Modules\ApplicationSenchaModule;
 use App\Panel\Modules\ManifestClassicModule;
-use App\Panel\Modules\ManifestModernModule;
+use App\Panel\Modules\Applications\ManifestModernModule;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
 class HomeController extends Controller
 {
     

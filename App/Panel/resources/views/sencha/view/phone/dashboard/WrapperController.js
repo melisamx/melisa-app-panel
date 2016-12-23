@@ -1,12 +1,11 @@
-Ext.define('Melisa.panel.view.phone.MainController', {
+Ext.define('Melisa.panel.view.phone.dashboard.WrapperController', {
     extend: 'Melisa.core.ViewController',    
     alias: 'controller.apppanelmain',
     
     requires: [
         'Melisa.ux.Loader',
-        'Melisa.core.menus.Tree',
-        'Melisa.panel.view.phone.menu.Modal',
-        'Melisa.core.module.Manager'
+        'Melisa.view.phone.menu.Modal',
+        'Melisa.core.menus.Tree'
     ],
     
     listen: {
@@ -22,14 +21,22 @@ Ext.define('Melisa.panel.view.phone.MainController', {
     onRender: function() {
         
         var me = this,
-            model = me.getViewModel(),
-            menuMain = model.getStore('menuMain'),
-            options = Melisa.core.menus.Tree.build(Ext.manifest.melisa.menu);
+            viewModel = me.getViewModel(),
+            menuMain = viewModel.getStore('menuMain'),
+            config = Ext.manifest.melisa,
+            options;
+    
+        if( !Ext.isEmpty(config.menu)) {
+            
+            options = Melisa.core.menus.Tree.build(config.menu);
+            menuMain.getRoot().appendChild(options);
+            
+        }
         
-        menuMain.getRoot().appendChild(options);
+        viewModel.setData(config);
         Ext.History.on('change', me.onChangeHistory, me);
         Ext.GlobalEvents.on('showcard', me.onGlobalShowCard, me);
-        Ext.Loader.loadScript(Ext.manifest.melisa.urls.realtime);
+        Ext.Loader.loadScript(config.urls.realtime);
         
     },
     

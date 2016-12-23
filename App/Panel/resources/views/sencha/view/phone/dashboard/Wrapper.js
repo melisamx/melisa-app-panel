@@ -1,19 +1,19 @@
-Ext.define('Melisa.panel.view.phone.Main', {
+Ext.define('Melisa.panel.view.phone.dashboard.Wrapper', {
     extend: 'Ext.Container',
+    alias: 'widget.apppanelmain',
     
     requires: [
-        'Melisa.panel.view.phone.main.Header',
-        'Melisa.panel.view.phone.main.Body',
-        'Melisa.panel.view.phone.MainController',
-        'Melisa.panel.view.MainModel'
+        'Melisa.panel.view.phone.dashboard.Header',
+        'Melisa.panel.view.phone.dashboard.Body',
+        'Melisa.panel.view.phone.dashboard.WrapperController',
+        'Melisa.panel.view.universal.MainModel'
     ],
     
-    alias: 'widget.apppanelmain',
     controller: 'apppanelmain',
+    layout: 'card',
     viewModel: {
         type: 'appmainmodel'
     },
-    layout: 'card',
     items: [
         {
             xtype: 'apppanelheader'

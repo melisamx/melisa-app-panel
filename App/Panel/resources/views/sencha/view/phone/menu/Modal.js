@@ -1,13 +1,12 @@
-
 Ext.define('Melisa.panel.view.phone.menu.Modal', {
     extend: 'Ext.Container',
+    alias: 'widget.apppanelmenumodal',
     
     requires: [
         'Melisa.panel.view.phone.menu.Avatars',
         'Melisa.panel.view.phone.menu.Options'
     ],
     
-    alias: 'widget.apppanelmenumodal',
     top: 0,
     left: 0,
     bottom: 0,
@@ -17,11 +16,11 @@ Ext.define('Melisa.panel.view.phone.menu.Modal', {
     hideAnimation: 'slideOut',
     modal: false,
     cls: 'core-modal',
+    scrollable: 'vertical',
     showAnimation: {
         type: 'slide',
         direction: 'right'
     },
-    scrollable: true,
     items: [
         {
             xtype: 'apppanelavatars',

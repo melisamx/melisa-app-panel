@@ -1,28 +1,24 @@
 <?php namespace App\Panel\Database\Seeds;
 
-use Illuminate\Database\Seeder;
-use Melisa\Laravel\Database\FirstOrCreate;
+use Melisa\Laravel\Database\InstallSeeder;
 
-class ApplicationSeeder extends Seeder
+/**
+ * 
+ *
+ * @author Luis Josafat Heredia Contreras
+ */
+class ApplicationSeeder extends InstallSeeder
 {
-    
-    use FirstOrCreate;
     
     public function run()
     {
         
-        $this->firstOrCreate('App\Core\Models\Applications', [
-            [
-                'find'=>[
-                    'key'=>'panel',
-                ],
-                'values'=>[
-                    'name'=>'Panel',
-                    'description'=>'Application Panel',
-                    'nameSpace'=>'Melisa.panel',
-                    'typeSecurity'=>'arat'
-                ]
-            ]
+        $this->installApplication('panel', [
+            'name'=>'Panel',
+            'description'=>'Application Panel',
+            'nameSpace'=>'Melisa.panel',
+            'typeSecurity'=>'arat',
+            'version'=>'1.0.2',
         ]);
         
     }

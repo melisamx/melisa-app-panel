@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Modules;
+<?php namespace App\Panel\Modules\Applications;
+
+use App\Panel\Modules\ManifesModule;
 
 /**
  * 
@@ -18,16 +20,7 @@ class ManifestModernModule extends ManifesModule
     ];
     
     public $jsAdd = [
-        'momentjs',
-        'momentjs.locales',
-        'momentjs.precise.range',
         'app.panel.app',
     ];
-    
-    public function getMenu() {
-        
-        return $this->menu('menu.panel.phone.main');
-        
-    }
     
 }

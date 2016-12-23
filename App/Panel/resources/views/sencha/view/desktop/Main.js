@@ -6,7 +6,7 @@ Ext.define('Melisa.panel.view.desktop.Main', {
         'Melisa.panel.view.desktop.West',
         'Melisa.panel.view.desktop.Center',
         'Melisa.panel.view.desktop.North',
-        'Melisa.panel.view.MainModel'
+        'Melisa.panel.view.universal.MainModel'
     ],
     
     controller: 'apppanelmain',
