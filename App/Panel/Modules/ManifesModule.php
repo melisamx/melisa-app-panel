@@ -44,14 +44,23 @@ class ManifesModule extends ManifestSenchaModule
             ],
             'idIdentity'=>$idIdentity,
             'identity'=>$identity,
-            'applications'=>[
+            'modules'=>[
                 'driver'=>[
                     'redirect'=>'/driver.php/drivers/'
                 ],
                 'chat'=>$this->module('task.chat.chat.view.access', false),
                 'security'=>$this->module('task.chat.chat.view.access', false),
+                'llantas'=>$this->module('task.llantas.llantas.escanear.access', false),
+                'tracking'=>$this->module('task.tracking.phone.pedimentos.view.access', false),
+                'lamina'=>$this->module('task.lamina.phone.programaciones.view.access', false),
             ]
         ];
+        
+    }
+    
+    public function getMenu() {
+        
+        return $this->menu('menu.panel.phone.main');
         
     }
     

@@ -13,7 +13,12 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
         var me = this,
             config = button.getMelisa();
     
-        button.disable();
+        if( !config) {
+            
+            me.log('null config');
+            return;
+            
+        }
         
         if( config.redirect) {
             
@@ -23,6 +28,7 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
             
         }
         
+        button.disable();
         me.moduleRun(config, me.onReadyOrRebootModule, me.onReadyOrRebootModule, button);
         
     },

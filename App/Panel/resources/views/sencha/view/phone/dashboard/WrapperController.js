@@ -4,7 +4,8 @@ Ext.define('Melisa.panel.view.phone.dashboard.WrapperController', {
     
     requires: [
         'Melisa.ux.Loader',
-        'Melisa.view.phone.menu.Modal'
+        'Melisa.view.phone.menu.Modal',
+        'Melisa.core.menus.Tree'
     ],
     
     listen: {
