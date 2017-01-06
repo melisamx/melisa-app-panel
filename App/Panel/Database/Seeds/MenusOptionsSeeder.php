@@ -26,6 +26,9 @@ class MenusOptionsSeeder extends InstallSeeder
                 ],
                 'option.events.access'=>[
                     'option.events.binnacle.view.access',
+                ],
+                'option.pedimentos.access'=>[
+                    'option.pedimentos.desktop.pedimentos.view.access',
                 ]
             ],
             'menu.panel.phone.main'=>[
@@ -44,6 +47,9 @@ class MenusOptionsSeeder extends InstallSeeder
                 'option.security.access'=>[
                     'option.security.phone.passwordless.view.access'
                 ],
+                'option.pedimentos.access'=>[
+                    'option.pedimentos.phone.pedimentos.view.access',
+                ]
             ],
         ]);
         
