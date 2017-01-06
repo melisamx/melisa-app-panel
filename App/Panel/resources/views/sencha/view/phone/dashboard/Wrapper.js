@@ -3,10 +3,15 @@ Ext.define('Melisa.panel.view.phone.dashboard.Wrapper', {
     alias: 'widget.apppanelmain',
     
     requires: [
+        'Melisa.core.Module',
         'Melisa.panel.view.phone.dashboard.Header',
         'Melisa.panel.view.phone.dashboard.Body',
         'Melisa.panel.view.phone.dashboard.WrapperController',
         'Melisa.panel.view.universal.MainModel'
+    ],
+    
+    mixins: [
+        'Melisa.core.Module'
     ],
     
     controller: 'apppanelmain',
