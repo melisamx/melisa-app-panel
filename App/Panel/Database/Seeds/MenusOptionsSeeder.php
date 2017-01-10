@@ -29,6 +29,9 @@ class MenusOptionsSeeder extends InstallSeeder
                 ],
                 'option.pedimentos.access'=>[
                     'option.pedimentos.desktop.pedimentos.view.access',
+                ],
+                'option.evaluations.access'=>[
+                    'option.evaluations.desktop.proveedores.view.access',
                 ]
             ],
             'menu.panel.phone.main'=>[
