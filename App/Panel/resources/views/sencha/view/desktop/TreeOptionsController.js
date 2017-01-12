@@ -1,11 +1,16 @@
 Ext.define('Melisa.panel.view.desktop.TreeOptionsController', {
-    extend: 'Melisa.panel.view.universal.TreeOptionsController',
-    
+    extend: 'Melisa.panel.view.universal.TreeOptionsController',    
     alias: 'controller.apppaneltreeoptions',
     
     requires: [
         'Melisa.panel.view.universal.TreeOptionsController'
     ],
+    
+    listen: {
+        global: {
+            activatemodule: 'updateModuleActive'
+        }
+    },
     
     onReadyModule: function(module) {
         
