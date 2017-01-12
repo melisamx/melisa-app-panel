@@ -8,6 +8,12 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
         'Melisa.core.module.Manager'
     ],
     
+    listen: {
+        global: {
+            closemoduleactive: 'onClickCloseModule'
+        }
+    },
+    
     onToogleBtnMain: function(button, pressed) {
         
         var me = this,
