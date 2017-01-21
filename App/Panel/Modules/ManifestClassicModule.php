@@ -15,7 +15,13 @@ class ManifestClassicModule extends ManifesModule
     ];
     
     public $jsAdd = [
-        'app.panel.app',
+        'debug'=>[
+            'app.panel.app',
+        ],
+        'nodebug'=>[
+            'app.sencha.classic',
+            'app.panel.app',
+        ]
     ];
     
     public function getMenu() {

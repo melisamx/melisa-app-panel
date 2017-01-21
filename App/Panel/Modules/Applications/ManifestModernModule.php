@@ -20,7 +20,13 @@ class ManifestModernModule extends ManifesModule
     ];
     
     public $jsAdd = [
-        'app.panel.app',
+        'debug'=>[
+            'app.panel.app',
+        ],
+        'nodebug'=>[
+            'app.sencha.modern',
+            'app.panel.app',
+        ]        
     ];
     
 }
