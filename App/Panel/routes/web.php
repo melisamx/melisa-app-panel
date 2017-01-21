@@ -19,7 +19,8 @@ Route::get('/logout', function() {
 });
 
 Route::group([
-    'prefix'=>'manifest'
+    'prefix'=>'manifest',
+    'middleware'=>'auth'
 ], function() {
     
     Route::get('/classic', 'HomeController@manifestClassic');
