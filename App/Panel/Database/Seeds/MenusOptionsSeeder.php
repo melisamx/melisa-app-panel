@@ -21,7 +21,6 @@ class MenusOptionsSeeder extends InstallSeeder
                 'option.lamina.access'=>[
                     'option.lamina.programaciones.view.access',
                     'option.lamina.tarjas.view.access',
-                    'option.lamina.tarjas.add.access',
                     'option.lamina.reportes.view.access',
                 ],
                 'option.events.access'=>[
