@@ -40,8 +40,7 @@ class MenusOptionsSeeder extends InstallSeeder
                 ],
                 'option.tracking.phone.pedimentos.view.access',
                 'option.lamina.access'=>[
-                    'option.lamina.phone.programaciones.view.access',
-                    'option.lamina.phone.tarjas.add.access',
+                    'option.lamina.phone.programaciones.view.access'
                 ],
                 'option.chat.phone.chat.view.access',
                 'option.llantas.access'=>[
