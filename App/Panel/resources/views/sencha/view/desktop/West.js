@@ -17,6 +17,8 @@ Ext.define('Melisa.panel.view.desktop.West', {
             xtype: 'apppaneltreeoptions',
             region: 'center',
             reference: 'treOptions',
+            height: '100%',
+            style: 'overflow: auto',
             bind: {
                 store: '{menuMain}'
             }
