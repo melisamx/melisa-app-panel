@@ -33,11 +33,11 @@ Ext.define('Melisa.panel.view.phone.dashboard.BodyController', {
         
     },
     
-    onReadyOrRebootModule: function(button, module) {
+    onReadyOrRebootModule: function(module, options) {
         
         var main = Ext.first('apppanelmain');
         
-        button.enable();
+        options.params.enable();
         main.setActiveItem(module);
         
     }

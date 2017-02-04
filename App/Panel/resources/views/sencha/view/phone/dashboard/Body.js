@@ -8,12 +8,18 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         'Melisa.view.phone.gmd.CardActions',
         'Melisa.view.phone.gmd.ButtonMedia',
         'Melisa.view.phone.gmd.ButtonAction',
-        'Melisa.panel.view.phone.dashboard.BodyController'
+        'Melisa.panel.view.phone.dashboard.BodyController',
+        'Melisa.core.Module'
+    ],
+    
+    mixins: [
+        'Melisa.core.Module'
     ],
     
     controller: 'panelbodycontroller',
     cls: 'applications-list',
     scrollable: true,
+    viewModel: {},
     items: [
         {
             xtype: 'gmdcard',
