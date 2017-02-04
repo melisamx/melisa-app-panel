@@ -46,7 +46,7 @@ class ManifesModule extends ManifestSenchaModule
             'identity'=>$identity,
             'modules'=>[
                 'driver'=>[
-                    'redirect'=>'/driver.php/drivers/'
+                    'redirect'=>'/driver.php/passengers/'
                 ],
                 'chat'=>$this->module('task.chat.chat.view.access', false),
                 'security'=>$this->module('task.chat.chat.view.access', false),

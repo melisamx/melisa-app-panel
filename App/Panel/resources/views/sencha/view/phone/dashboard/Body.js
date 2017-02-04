@@ -18,6 +18,9 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         {
             xtype: 'gmdcard',
             userCls: 'card-driver',
+            bind: {
+                hidden: '{!modules.driver.allowed}'
+            },
             items: [
                 {
                     xtype: 'gmdcardactions',
@@ -47,6 +50,9 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         {
             xtype: 'gmdcard',
             userCls: 'card-chat',
+            bind: {
+                hidden: '{!modules.chat.allowed}'
+            },
             items: [
                 {
                     xtype: 'gmdcardactions',
@@ -76,6 +82,9 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         {
             xtype: 'gmdcard',
             userCls: 'card-llantas',
+            bind: {
+                hidden: '{!modules.llantas.allowed}'
+            },
             items: [
                 {
                     xtype: 'gmdcardactions',
@@ -105,6 +114,9 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         {
             xtype: 'gmdcard',
             userCls: 'card-tracking',
+            bind: {
+                hidden: '{!modules.llantas.allowed}'
+            },
             items: [
                 {
                     xtype: 'gmdcardactions',
@@ -134,6 +146,9 @@ Ext.define('Melisa.panel.view.phone.dashboard.Body', {
         {
             xtype: 'gmdcard',
             userCls: 'card-lamina',
+            bind: {
+                hidden: '{!modules.lamina.allowed}'
+            },
             items: [
                 {
                     xtype: 'gmdcardactions',

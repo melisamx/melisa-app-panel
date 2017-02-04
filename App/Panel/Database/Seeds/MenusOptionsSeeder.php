@@ -23,6 +23,9 @@ class MenusOptionsSeeder extends InstallSeeder
                     'option.lamina.tarjas.view.access',
                     'option.lamina.reportes.view.access',
                     'option.lamina.firmas.view.access',
+                    'option.lamina.reports.access'=>[
+                        'option.lamina.reports.consecutivos.access'
+                    ],
                 ],
                 'option.events.access'=>[
                     'option.events.binnacle.view.access',
@@ -33,6 +36,9 @@ class MenusOptionsSeeder extends InstallSeeder
                 'option.evaluations.access'=>[
                     'option.evaluations.desktop.providers.view.access',
                     'option.evaluations.desktop.providers.evaluations.view.access',
+                ],
+                'option.drive.access'=>[
+                    'option.drive.browser.view.access',
                 ],
                 'option.security.access'=>[
                     'option.security.users.view.access',
