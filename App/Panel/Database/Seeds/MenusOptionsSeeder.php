@@ -45,6 +45,10 @@ class MenusOptionsSeeder extends InstallSeeder
                     'option.security.scopes.view.access',
                     'option.security.passwordless.view.access'
                 ],
+                'option.people.access'=>[
+                    'option.people.contacts.view.access',
+                    'option.people.labels.view.access',
+                ],
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[
