@@ -5,7 +5,8 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
     requires: [
         'Melisa.ux.Loader',
         'Melisa.core.menus.Tree',
-        'Melisa.core.module.Manager'
+        'Melisa.core.module.Manager',
+        'Melisa.ux.avatar.LocalStorage'
     ],
     
     listen: {

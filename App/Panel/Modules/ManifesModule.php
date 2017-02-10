@@ -4,6 +4,7 @@ use App\Core\Modules\ManifestSenchaModule;
 use App\Core\Logics\Identities\IdentitySession;
 use App\Core\Repositories\IdentitiesRepository;
 use App\Core\Repositories\UsersRepository;
+use App\Security\Logics\Users\Avatars\GetAvatar;
 
 /**
  * 
@@ -35,6 +36,8 @@ class ManifesModule extends ManifestSenchaModule
             
         }
         
+        $userAvatar = $this->getAvatarUser($user);
+        
         return [
             'user'=>$user->getAttributes(),
             'menu'=>$this->getMenu(),
@@ -44,10 +47,12 @@ class ManifesModule extends ManifestSenchaModule
             ],
             'idIdentity'=>$idIdentity,
             'identity'=>$identity,
+            'avatar'=>$userAvatar,
             'modules'=>[
                 'driver'=>[
                     'redirect'=>'/driver.php/passengers/'
                 ],
+                'drive'=>$this->module('task.drive.files.public.view'),
                 'chat'=>$this->module('task.chat.chat.view.access', false),
                 'security'=>$this->module('task.chat.chat.view.access', false),
                 'llantas'=>$this->module('task.llantas.llantas.escanear.access', false),
@@ -56,6 +61,11 @@ class ManifesModule extends ManifestSenchaModule
             ]
         ];
         
+    }
+    
+    public function getAvatarUser($user = null)
+    {        
+        return app()->make(GetAvatar::class)->init($user);        
     }
     
     public function getMenu() {
