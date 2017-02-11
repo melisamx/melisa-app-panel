@@ -47,7 +47,6 @@ class MenusOptionsSeeder extends InstallSeeder
                 ],
                 'option.people.access'=>[
                     'option.people.contacts.view.access',
-                    'option.people.labels.view.access',
                 ],
             ],
             'menu.panel.phone.main'=>[
