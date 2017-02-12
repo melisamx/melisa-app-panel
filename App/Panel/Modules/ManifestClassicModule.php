@@ -11,7 +11,8 @@ class ManifestClassicModule extends ManifesModule
     public $cssAdd = [
         'animatecss',
         'app.panel.app.css',
-        'roboto'
+        'roboto',
+        'fontawesome'
     ];
     
     public $jsAdd = [
