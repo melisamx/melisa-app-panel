@@ -18,7 +18,7 @@ class ApplicationSeeder extends InstallSeeder
             'description'=>'Application Panel',
             'nameSpace'=>'Melisa.panel',
             'typeSecurity'=>'arat',
-            'version'=>'1.0.2',
+            'version'=>'1.0.3',
         ]);
         
     }
