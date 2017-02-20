@@ -38,6 +38,9 @@ Ext.define('Melisa.panel.view.desktop.North', {
                     widht: 300,
                     cls: 'identity-position',
                     textAlign: 'rigth',
+                    listeners: {
+                        click: 'onClickBtnUser'
+                    },
                     bind: {
                         text: [
                             '<h3 class="name">{identityName}</h3>',

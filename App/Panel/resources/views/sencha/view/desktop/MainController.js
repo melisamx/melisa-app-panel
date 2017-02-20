@@ -15,6 +15,70 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
         }
     },
     
+    config: {
+        windowAccount: null
+    },
+    
+    createWindowAccount: function() {
+        
+        var me = this;
+    
+        return Ext.create('widget.tooltip', {
+            layout: 'anchor',
+            cls: 'window-account',
+            ui: 'white',
+            width: 355,
+            height: 200,
+            maxHeight: 500,
+            minHeight: 82,
+            autoHide: false,
+            shadow: false,
+            autoScroll: true,
+            floating: true,
+            items: [
+                {
+                    xtype: 'container',
+                    padding: '14 12',
+                    margin: '0 0 5',
+                    cls: 'identity-container',
+                    height: 130,
+                    layout: {
+                        type: 'hbox',
+                        align: 'stretch'
+                    }
+                }
+            ],
+            bbar: [
+                '->',
+                {
+                    text: 'Cerrar sessión',
+                    handler: me.onClickCerrarSession,
+                    scope: me
+                }
+            ]
+        });
+            
+    },
+    
+    onClickCerrarSession: function() {
+        
+        window.location = 'logout';
+        
+    },
+    
+    onClickBtnUser: function(button) {
+        
+        var me = this,
+            windowAccount = me.getWindowAccount();
+    
+        if( !windowAccount) {
+            me.setWindowAccount(windowAccount = me.createWindowAccount());
+        }
+        
+        windowAccount.showBy(button, 'tr-br?');
+        
+    },
+    
     onToogleBtnMain: function(button, pressed) {
         
         var me = this,
