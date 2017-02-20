@@ -30,8 +30,8 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
         } else {
             
             treOptions.setMicro(null);
-            panWest.setWidth(350);
-            button.up().setWidth(350);
+            panWest.setWidth(242);
+            button.up().setWidth(242);
             
         }
         

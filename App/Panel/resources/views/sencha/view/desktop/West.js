@@ -8,9 +8,7 @@ Ext.define('Melisa.panel.view.desktop.West', {
     alias: 'widget.apppanelwest',
     reference: 'panWest',
     region: 'west',
-    width: 350,
     cls: 'west',
-//    minWidth: 350,
     layout: 'border',
     items: [
         {
