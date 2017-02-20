@@ -46,6 +46,8 @@ Ext.define('Melisa.panel.view.desktop.MainController', {
         
         model.set('appName', Ext.manifest.melisa.appName);
         model.set('identityName', Ext.manifest.melisa.user.name);
+        model.set('urlAvatar', Ext.manifest.melisa.modules.drive);
+        model.set('avatar', Ext.manifest.melisa.avatar);
         menuMain.getRoot().appendChild(options);
         
     },

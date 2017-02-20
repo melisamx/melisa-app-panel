@@ -6,19 +6,22 @@ Ext.define('Melisa.panel.view.desktop.Main', {
         'Melisa.panel.view.desktop.West',
         'Melisa.panel.view.desktop.Center',
         'Melisa.panel.view.desktop.North',
-        'Melisa.panel.view.universal.MainModel'
+        'Melisa.panel.view.universal.MainModel',
+        'Melisa.override.core.ModuleTabs'
     ],
     
     controller: 'apppanelmain',
-    viewModel: {
-        type: 'appmainmodel'
-    },
-    border: false,
     layout: 'border',
     cls: 'app',
+    border: false,
+    viewModel: {
+        type: 'appmainmodel'
+    },    
     items: [
         {
-            xtype: 'apppanelwest'
+            xtype: 'apppanelwest',
+            split: true,
+            width: 242
         },
         {
             xtype: 'apppanelcenter'

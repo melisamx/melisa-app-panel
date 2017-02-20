@@ -1,28 +1,54 @@
-.app {
+.app
+{
     
-    .north {
+    .north
+    {
+        
+        &::after
+        {
+            content: '';
+            background-color: @color-primary;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .powerby img
+        {
+            position: absolute;
+            top: -26px;
+            height: 50px;
+            margin-left: -111px;
+        }
         
         .x-panel-body-default,
-        .x-toolbar-default {
+        .x-toolbar-default
+        {
             
             background-color: @color-second !important;
             
         }
         
-        .north-west {
-            &.x-toolbar-default {
-                background-color: @color-primary !important;
-            }
+        .btnMain,
+        .btnMain.x-btn-focus
+        {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none !important;
+            margin-left: 8px;
             
-            .btnMain .x-btn-text {
-                flex: 0 0 auto;
-            }
-            
-            .x-btn-inner-default-toolbar-large
+            .x-btn-icon
             {
-                padding: 0 19px !important;
+                font-size: 20px;
+                
             }
             
+        }
+        
+        .x-btn-icon-el::before
+        {
+            color: @color-neutro-secondary;
         }
         
         .x-btn-focus.x-btn-default-toolbar-large, 
@@ -36,14 +62,37 @@
         }
         
         .x-btn-inner {
-            color: #fff;
+            color: @color-neutro-secondary;
             font-weight: bold;
         }
         
-        .button-close-module .x-btn-icon-el
+        .identity-position
         {
-            font-size: 28px;
-            color: #fff;
+            
+            text-align: right;
+            
+            .name,
+            .position
+            {
+                margin: 0;
+                margin-right: 51px;
+                text-transform: uppercase;
+            }
+            
+            .position
+            {
+                font-weight: normal;
+            }
+            
+            .avatar
+            {
+                border-radius: 50%;
+                width: 38px;
+                position: absolute;
+                right: 0;
+                top: -6px;
+            }
+            
         }
         
     }

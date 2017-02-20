@@ -1,6 +1,5 @@
-
 Ext.define('Melisa.panel.view.desktop.Center', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.tab.Panel',
     
     alias: 'widget.apppanelcenter',
     region: 'center',

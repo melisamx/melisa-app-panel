@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
     
     grunt.initConfig({
-        main: {
+        pkg: {
             appName: 'Panel',
             src: 'resources/assets/',
-            output: '../../public/<%= main.appName.toLowerCase() %>/',
+            output: '../../public/<%= pkg.appName.toLowerCase() %>/',
             proyect: {
                 name: 'Melisa Panel',
                 version: '1.0.0',
@@ -17,13 +17,13 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    '<%= main.output %>css/app.css': '<%= main.src %>less/app.less',
-                    '<%= main.output %>css/app-phone.css': '<%= main.src %>less/app-phone.less'
+                    '<%= pkg.output %>css/app.css': '<%= pkg.src %>less/app.less',
+                    '<%= pkg.output %>css/app-phone.css': '<%= pkg.src %>less/app-phone.less'
                 }
             }
         },
         watch: {
-            files: ['<%= main.src %>less/**/*.less'],
+            files: ['<%= pkg.src %>less/**/*.less'],
             tasks: ['less']
         }
     });

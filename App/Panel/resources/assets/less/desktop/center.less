@@ -1,22 +1,26 @@
-.center {
+.center
+{
         
-    .x-panel-body-default {
+    .x-panel-body-default
+    {
         background-color: @color-panel-body !important;
     }
 
     .x-tab-bar-default,
     .x-tab-focus.x-tab-active.x-tab-default,
-    .x-tab.x-tab-active.x-tab-default
+    .x-tab.x-tab-active.x-tab-default,
+    .x-tab.x-tab-pressed
     {
-        background-color: #F0F0F0;
-        box-shadow: 0 -1px 0 0 #d6d6d6 inset;
+        background-color: var(--tab-bar-background);
+        box-shadow: 0 -1px 0 0 var(--color-neutro-third) inset;
+        outline: none;
     }
 
     .x-tab-focus.x-tab-active.x-tab-default,
     .x-tab.x-tab-active.x-tab-default
     {
         content: '';
-        box-shadow: 0 -2px 0 0 #F82739 inset;
+        box-shadow: 0 -2px 0 0 @color-primary inset;
     }
 
     .x-tab.x-tab-active.x-tab-default .x-tab-inner-default

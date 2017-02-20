@@ -1,4 +1,3 @@
-
 Ext.define('Melisa.panel.view.desktop.North', {
     extend: 'Ext.panel.Panel',
     
@@ -10,48 +9,41 @@ Ext.define('Melisa.panel.view.desktop.North', {
     reference: 'panelnorth',
     items: [
         {
-            xtype: 'toolbar',
             region: 'west',
-            cls: 'north-west',
-            width: 350,
+            xtype: 'button',
+            iconCls: 'fa fa-bars',
+            cls: 'btnMain',
+            enableToggle: true,
+            scale: 'large',
+            listeners: {
+                toggle: 'onToogleBtnMain'
+            }
+        },
+        {
+            region: 'center',
+            layout: 'center',
             items: [
                 {
-                    xtype: 'button',
-                    iconCls: 'fa fa-bars',
-                    scale: 'large',
-                    width: '100%',
-                    cls: 'btnMain',
-                    enableToggle: true,
-                    bind: {
-                        text: '{appName}'
-                    },
-                    listeners: {
-                        toggle: 'onToogleBtnMain'
-                    }
+                    xtype: 'container',
+                    cls: 'powerby',
+                    html: '<img src="/assets/images/powerby.png" height="25" />'
                 }
             ]
         },
         {
+            region: 'east',
             xtype: 'toolbar',
-            region: 'center',
             items: [
                 {
-                    xtype: 'button',
-                    cls: 'button-close-module',
-                    scale: 'large',
-                    iconCls: 'x-fa fa fa-chevron-left',
+                    widht: 300,
+                    cls: 'identity-position',
+                    textAlign: 'rigth',
                     bind: {
-                        text: '{moduleActive.title}',
-                        hidden: '{showclosemodule}'
-                    },
-                    listeners: {
-                        click: 'onClickCloseModule'
-                    }
-                },
-                '->',
-                {
-                    bind: {
-                        text: '{identityName}'
+                        text: [
+                            '<h3 class="name">{identityName}</h3>',
+                            '<p class="position">Gerente de operaciones</p>',
+                            '<img class="avatar" src="{urlAvatar}{avatar.idFileAvatar}/?nc={avatar.updatedAt ? avatar.updatedAt : avatar.createdAt}">'
+                        ].join('')
                     }
                 }
             ]
