@@ -48,6 +48,7 @@ class MenusOptionsSeeder extends InstallSeeder
                 'option.people.access'=>[
                     'option.people.contacts.view.access',
                 ],
+                'option.forge.forge.view.access',
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[
