@@ -47,6 +47,8 @@ class MenusOptionsSeeder extends InstallSeeder
                 ],
                 'option.people.access'=>[
                     'option.people.contacts.view.access',
+                    'option.people.states.add.access',
+                    'option.people.states.view.access',
                 ],
                 'option.forge.forge.view.access',
             ],
