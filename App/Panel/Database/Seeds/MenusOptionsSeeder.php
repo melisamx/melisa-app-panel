@@ -51,6 +51,7 @@ class MenusOptionsSeeder extends InstallSeeder
                     'option.people.states.view.access',
                 ],
                 'option.forge.forge.view.access',
+                'option.chat.chat.view.access',
             ],
             'menu.panel.phone.main'=>[
                 'option.driver.access'=>[
