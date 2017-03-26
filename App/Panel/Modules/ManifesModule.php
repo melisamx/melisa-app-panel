@@ -53,7 +53,7 @@ class ManifesModule extends ManifestSenchaModule
                     'redirect'=>'/driver.php/passengers/'
                 ],
                 'drive'=>$this->module('task.drive.files.public.view'),
-                'chat'=>$this->module('task.chat.chat.view.access', false),
+                'chat'=>$this->module('task.chat.phone.chat.view.access', false),
                 'security'=>$this->module('task.chat.chat.view.access', false),
                 'llantas'=>$this->module('task.llantas.llantas.escanear.access', false),
                 'tracking'=>$this->module('task.tracking.phone.pedimentos.view.access', false),
