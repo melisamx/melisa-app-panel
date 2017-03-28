@@ -7,3 +7,38 @@
 {
     background-color: fade(@color-primary, 50%);
 }
+
+.x-grid-widgetcolumn-cell-inner
+{
+    
+    
+    .x-btn,
+    .x-btn.x-btn-pressed
+    {
+        background-color: transparent;
+        border: none;
+        
+        .x-btn-icon-el-default-small
+        {
+            color: transparent;
+            transition:all .4s cubic-bezier(.25,.8,.25,1);
+            transition-property:color,opacitiy,transform;
+        }
+        
+    }
+    
+}
+
+.x-grid-item-over
+{
+    .x-grid-widgetcolumn-cell-inner
+    {
+        .x-btn
+        {
+            .x-btn-icon-el-default-small
+            {
+                color: @color-neutro-secondary;
+            }
+        }
+    }
+}
