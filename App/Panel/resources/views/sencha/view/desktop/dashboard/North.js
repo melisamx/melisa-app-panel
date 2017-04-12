@@ -1,12 +1,10 @@
-Ext.define('Melisa.panel.view.desktop.North', {
-    extend: 'Ext.panel.Panel',
-    
+Ext.define('Melisa.panel.view.desktop.dashboard.North', {
+    extend: 'Ext.panel.Panel',    
     alias: 'widget.apppanelnorth',
-    region: 'north',
+    
     cls: 'north',
-    height: 80,
     layout: 'border',
-    reference: 'panelnorth',
+    height: 80,
     items: [
         {
             region: 'west',
@@ -16,7 +14,7 @@ Ext.define('Melisa.panel.view.desktop.North', {
             enableToggle: true,
             scale: 'large',
             listeners: {
-                toggle: 'onToogleBtnMain'
+                toggle: 'showMainMenu'
             }
         },
         {

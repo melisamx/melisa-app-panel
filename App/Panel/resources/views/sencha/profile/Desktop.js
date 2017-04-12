@@ -1,7 +1,6 @@
-
 Ext.define('Melisa.panel.profile.Desktop', {
     extend: 'Melisa.core.ProfileDesktop',
     
-    view: 'Melisa.panel.view.desktop.Main'
+    view: 'Melisa.panel.view.desktop.dashboard.Wrapper'
     
 });

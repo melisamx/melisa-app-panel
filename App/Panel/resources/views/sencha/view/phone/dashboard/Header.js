@@ -10,9 +10,7 @@ Ext.define('Melisa.panel.view.phone.dashboard.Header', {
         {
             xtype: 'button',
             iconCls: 'x-fa fa fa-bars',
-            listeners: {
-                tap: 'onTapBtnTitle'
-            }
+            handler: 'showMainMenu'
         },
         {
             xtype: 'button',

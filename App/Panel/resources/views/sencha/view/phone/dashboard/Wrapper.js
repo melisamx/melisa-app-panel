@@ -7,7 +7,7 @@ Ext.define('Melisa.panel.view.phone.dashboard.Wrapper', {
         'Melisa.panel.view.phone.dashboard.Header',
         'Melisa.panel.view.phone.dashboard.Body',
         'Melisa.panel.view.phone.dashboard.WrapperController',
-        'Melisa.panel.view.universal.MainModel'
+        'Melisa.view.universal.dashboard.WrapperModel'
     ],
     
     mixins: [
@@ -16,16 +16,20 @@ Ext.define('Melisa.panel.view.phone.dashboard.Wrapper', {
     
     controller: 'apppanelmain',
     layout: 'card',
+    hideAnimation: 'fadeOut',
     viewModel: {
         type: 'appmainmodel'
     },
     items: [
         {
-            xtype: 'apppanelheader'
+            xtype: 'apppanelheader',
+            bind: {
+                hidden: '{conApplicationsList.hidden}'
+            }
         },
         {
             xtype: 'apppanelbody',
-            reference: 'apppanelbody'
+            reference: 'conApplicationsList'
         }
     ]
     
