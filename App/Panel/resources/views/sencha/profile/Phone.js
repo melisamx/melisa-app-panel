@@ -1,4 +1,3 @@
-
 Ext.define('Melisa.panel.profile.Phone', {
     extend: 'Melisa.core.ProfilePhone',
     

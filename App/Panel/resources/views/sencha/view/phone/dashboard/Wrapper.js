@@ -15,8 +15,8 @@ Ext.define('Melisa.panel.view.phone.dashboard.Wrapper', {
     ],
     
     controller: 'apppanelmain',
-    layout: 'card',
     hideAnimation: 'fadeOut',
+    layout: 'fit',
     viewModel: {
         type: 'appmainmodel'
     },
