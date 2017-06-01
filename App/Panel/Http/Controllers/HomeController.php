@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Http\Controllers;
+<?php
+
+namespace App\Panel\Http\Controllers;
 
 use Melisa\Laravel\Http\Controllers\Controller;
 use App\Core\Logics\Redirects\Redirects;
@@ -17,8 +19,7 @@ class HomeController extends Controller
 {
     
     public function index(Request $request, Redirects $redirect, ApplicationSenchaModule $module)
-    {
-        
+    {        
         $response = $redirect->init($request->user()->id);
         
         if( $response instanceof RedirectResponse) {
@@ -27,20 +28,17 @@ class HomeController extends Controller
             
         }
         
-        return $module->render();
-        
+        return $module->render();        
     }
     
-    public function manifestClassic(ManifestClassicModule $module) {
-        
-        return $module->render();
-        
+    public function manifestClassic(ManifestClassicModule $module)
+    {        
+        return $module->render();        
     }
     
-    public function manifestModern(ManifestModernModule $module) {
-        
-        return $module->render();
-        
+    public function manifestModern(ManifestModernModule $module)
+    {        
+        return $module->render();        
     }
     
 }

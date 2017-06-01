@@ -2,28 +2,21 @@
 
 Route::get('/', 'HomeController@index')->middleware('auth');
 
-Route::get('/login', function() {
-    
-    return redirect('../login');
-    
+Route::get('/login', function() {    
+    return redirect('../login');    
 });
 
-Route::get('/logout', function() {
-    
+Route::get('/logout', function() {    
     /* necesary no destroy session */
-    session()->flush();
-    
+    session()->flush();    
     Auth::logout();
-    return redirect('../login');
-    
+    return redirect('../login');    
 });
 
 Route::group([
     'prefix'=>'manifest',
     'middleware'=>'auth'
-], function() {
-    
+], function() {    
     Route::get('/classic', 'HomeController@manifestClassic');
     Route::get('/modern', 'HomeController@manifestModern');
-
 });
