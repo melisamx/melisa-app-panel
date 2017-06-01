@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Modules;
+<?php
+
+namespace App\Panel\Modules;
 
 /**
  * 
@@ -24,10 +26,9 @@ class ManifestModernModule extends ManifesModule
         'app.panel.app',
     ];
     
-    public function getMenu() {
-        
-        return $this->menu('menu.panel.phone.main');
-        
+    public function getMenu()
+    {        
+        return $this->menu('menu.panel.phone.main');        
     }
     
 }

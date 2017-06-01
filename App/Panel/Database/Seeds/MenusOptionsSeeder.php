@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Database\Seeds;
+<?php
+
+namespace App\Panel\Database\Seeds;
 
 use Melisa\Laravel\Database\InstallSeeder;
 
@@ -11,8 +13,7 @@ class MenusOptionsSeeder extends InstallSeeder
 {
     
     public function run()
-    {
-        
+    {        
         $this->installMenuOptions([
             'menu.panel.main'=>[
                 'option.driver.access'=>[
@@ -72,8 +73,7 @@ class MenusOptionsSeeder extends InstallSeeder
                     'option.pedimentos.phone.pedimentos.view.access',
                 ]
             ],
-        ]);
-        
+        ]);        
     }
     
 }

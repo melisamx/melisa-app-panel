@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Modules\Applications;
+<?php
+
+namespace App\Panel\Modules\Applications;
 
 use App\Panel\Modules\ManifesModule;
 

@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Modules;
+<?php
+
+namespace App\Panel\Modules;
 
 /**
  * 
@@ -25,10 +27,9 @@ class ManifestClassicModule extends ManifesModule
         ]
     ];
     
-    public function getMenu() {
-        
-        return $this->menu('menu.panel.main');
-        
+    public function getMenu()
+    {        
+        return $this->menu('menu.panel.main');        
     }
     
 }

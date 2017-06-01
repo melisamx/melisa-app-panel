@@ -1,4 +1,6 @@
-<?php namespace App\Panel\Database\Seeds;
+<?php
+
+namespace App\Panel\Database\Seeds;
 
 use Melisa\Laravel\Database\InstallSeeder;
 
@@ -11,15 +13,13 @@ class DatabaseSeeder extends InstallSeeder
 {
     
     public function run()
-    {
-                
+    {                
         $this->call(ApplicationSeeder::class);        
         $this->call(AssetsSeeder::class);
         $this->call(MenusSeeder::class);
         $this->call(MenusOptionsSeeder::class);
         
-        $this->cleanLogs();
-        
+        $this->cleanLogs();        
     }
     
 }
