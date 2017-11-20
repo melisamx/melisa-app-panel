@@ -11,15 +11,9 @@
 |
 */
 
-require_once __DIR__ . '/../App/Panel/Application.php';
+use App\Panel\Application;
 
-$app = new App\Panel\Application(
-    [
-        'base'=>  realpath(__DIR__ . '/../App/Panel'),
-        'storage'=> realpath(__DIR__ . '/../App/Panel/storage'),
-        'storageSession'=>realpath(__DIR__ . '/../storage/framework/sessions'),
-    ]
-);
+$app = new App\Panel\Application(realpath(__DIR__ . '/../App/Panel'));
 
 /*
 |--------------------------------------------------------------------------
